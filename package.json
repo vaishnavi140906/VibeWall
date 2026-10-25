@@ -1,0 +1,18 @@
+{
+  "name": "vibewall-root",
+  "version": "1.0.0",
+  "description": "VibeWall - Interactive Community Message Board",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,magenta\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "start:server": "cd server && npm start",
+    "build:client": "cd client && npm run build",
+    "test:server": "cd server && npm test",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
